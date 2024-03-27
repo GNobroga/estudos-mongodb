@@ -4,16 +4,26 @@ O comando **update** irá atualizar o primeiro documento que encontrar. Para atu
 
 ```bash
 db.collection.update(
-    {"nome": "Gabriel" },
+    {"nome": "Gabriel" }, // Critério de consulta
     {
         $set: {
-            "nome": "José"
+            "nome": "José" // Operação de atualização
         }
     },
     {
-        multi: true
+        multi: true /// Atualiza múltiplos documentos
     }
 )
+```
+
+ou 
+
+```bash
+db.colecao.updateMany(
+   { campo: valor },  // Critério de consulta
+   { $set: { campoParaAtualizar: novoValor } } // Operação de atualização
+)
+
 ```
 
 ## Remover
@@ -23,3 +33,9 @@ db.collection.remove({
     "_id": ObjectId("dsdsdsd")
 })
 ```
+
+## Operadores
+
+- $set 
+- $push - Só adiciona 1 elemento dentro de 1 array
+- $each
