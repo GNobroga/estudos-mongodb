@@ -15,3 +15,35 @@ Obs: Quando vamos trabalhar com coordenadas geográficas no MongoDB precisamos t
         }
     )
 ```
+
+## Importar JSON
+
+```bash
+    mongoimport -d <nome-do-banco> -c <nome-da-collection> --jsonArray < incricoes.json
+```
+
+## Criar index
+
+```bash
+    db.collections.createIndex({
+        "field": "value"
+    })
+```
+
+## Group Bt
+
+```bash
+    db.collections.aggregate([
+        {
+            $geoNear: {
+                "near": {
+                    "coordinates": [12, -23],
+                    "type": "Point"
+                },
+                "distanceField": "distancia.calculada",
+                "spherical": true,
+                "num": 4
+            }
+        }
+    ])
+```
