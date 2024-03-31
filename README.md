@@ -1,3 +1,3 @@
 # Mongo DB
 
-Repositório de estudos para o MongoDB
+Esse repositório contém informações relacionadas ao MongoBD
