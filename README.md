@@ -1,4 +1,4 @@
-# Mongo DB
+# MongoDB
 
 Esse repositório contém informações relacionadas ao MongoBD
 
